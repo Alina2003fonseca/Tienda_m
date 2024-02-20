@@ -9,7 +9,6 @@ import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.i18n.LocaleChangeInterceptor;
 import org.springframework.web.servlet.i18n.SessionLocaleResolver;
-
 @Configuration
 public class ProjectConfig implements WebMvcConfigurer{
     
@@ -22,14 +21,18 @@ public class ProjectConfig implements WebMvcConfigurer{
         return slr;
        }
     @Bean
-    public LocaleChangeInterceptor changeInterceptor(){
+    public LocaleChangeInterceptor LocalechangeInterceptor(){
       var lci = new LocaleChangeInterceptor ();
       lci.setParamName("Lang");
       return lci;
     }
     @Override
     public void addInterceptors(InterceptorRegistry registro){
-    registro.addInterceptor( LocaleChangeInterceptor ());
+    registro.addInterceptor(LocalechangeInterceptor());
     
 }
+
+  
+
+    
 }
