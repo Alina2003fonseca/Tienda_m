@@ -69,4 +69,5 @@ public class ProductoController {
         productoService.delete(producto);
         return "/producto/listado";
     }
+    
 }

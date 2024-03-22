@@ -10,8 +10,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 @Service
-public class ProductoServiceImpl1 implements ProductoService{
+public  class ProductoServiceImpl1 implements ProductoService{
 
+  
     @Autowired
     private ProductoDao productoDao;
     @Override
@@ -63,5 +64,9 @@ public class ProductoServiceImpl1 implements ProductoService{
       @Transactional(readOnly = true)
     public List<Producto> metodoSQL(double precioInf, double precioSup){
         return productoDao.metodoSQL(precioInf, precioSup);
-}}
+}
 
+    @Override
+    public List<Producto> findByDescripcion(String descripcion) {
+        return productoDao.findByDescripcion(descripcion) ;
+    }}

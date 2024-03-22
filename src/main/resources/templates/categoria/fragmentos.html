@@ -184,6 +184,30 @@
                     </div>
                 </div>
             </div>
+            
+            <div class="col-md-3">
+                    <form method="POST" th:action="@{/pruebas/query4}" 
+                          class="was-validated">
+                        <div class="card">                            
+                            <div class="card-body">
+                                <div class="mb-3">
+                                    <label for="nombre">[[#{pruebas.nombre}]]</label>
+                                <input type="text" class="form-control" 
+                                           th:value="${nombre}"
+                                           th:name="nombre" required="true"/>
+                                </div>
+                            </div>
+                            <div class="card-footer text-center">
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fas fa-check"></i> [[#{pruebas.ampliadas}]]
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            
+            
+            
         </section>
     </body>
 </html>

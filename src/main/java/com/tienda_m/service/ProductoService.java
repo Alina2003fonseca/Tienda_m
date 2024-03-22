@@ -1,4 +1,3 @@
-
 package com.tienda_m.service;
 
 import com.tienda_m.domain.Producto;
@@ -30,5 +29,11 @@ public interface ProductoService {
       //Esta consulta utiliza consultas SQL
     
     public List<Producto> metodoSQL(double precioInf, double precioSup);
+    
+    public List<Producto> findByDescripcion(String descripcion);
 }
+
+    
+    
+
 
